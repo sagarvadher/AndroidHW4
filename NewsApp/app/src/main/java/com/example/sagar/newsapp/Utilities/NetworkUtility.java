@@ -44,6 +44,10 @@ public class NetworkUtility {
         }
         return url;
     }
+
+    //build the URL with the appropriate query parameters
+
+
     public static String getResponseFromURL(URL url) throws IOException{
         HttpURLConnection conn = (HttpURLConnection) url.openConnection();
         try{
@@ -66,6 +70,11 @@ public class NetworkUtility {
             conn.disconnect();
         }
     }
+
+    //Appended the query parameter for buliding the URL
+
+
+
     public static List<NewsItem> parseJSON(String json)
     {
         ArrayList<NewsItem> newsItems = new ArrayList<>();
@@ -92,5 +101,9 @@ public class NetworkUtility {
         }
         return newsItems;
     }
+
+    //Parsed the JSON Data in the news API
+
+
 
 }

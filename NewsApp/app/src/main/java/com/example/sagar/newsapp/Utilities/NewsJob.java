@@ -37,6 +37,8 @@ public class NewsJob extends com.firebase.jobdispatcher.JobService{
         return true;
     }
 
+    //created the job dispatcher for the database update with the appropriate data
+
     @Override
     public boolean onStopJob(com.firebase.jobdispatcher.JobParameters job) {
         return false;

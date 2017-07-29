@@ -22,4 +22,6 @@ import android.provider.BaseColumns;
             public static final String COLUMN_ID = "id";
 
         }
+
+        //made the appropriate table fields according the news API given
     }

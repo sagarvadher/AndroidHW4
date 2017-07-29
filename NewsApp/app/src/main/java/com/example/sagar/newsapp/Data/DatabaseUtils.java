@@ -23,6 +23,9 @@ public class DatabaseUtils {
         return cursor;
 
         }
+    //created the method for reading the data from the database
+
+
 
         public static void updatenewDB(SQLiteDatabase db, ArrayList<NewsItem> newsitems) throws Exception {
 
@@ -51,6 +54,11 @@ public class DatabaseUtils {
         public static void deleteAll(SQLiteDatabase db){
             db.delete(Contract.TABLE_TODO.TABLE_NAME, null,  null);
         }
+
+        //update data from API with the above method implemented
+
+
+
     }
 
 

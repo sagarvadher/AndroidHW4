@@ -41,6 +41,7 @@ private static final int SCHEDULE_INTERVAL_MINUTES=0;
 
     }
 
+    //Added the firebase dispatcher for the latest update taking place in the background
 
 
 

@@ -77,4 +77,5 @@ public class NewsItem {
         this.newsList=newsList;
     }
 
+    //set the getters and setters
 }

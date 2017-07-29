@@ -13,7 +13,7 @@ public class DBHelper extends SQLiteOpenHelper {
     private static final int DATABASE_VERSION = 1;
 
     private static final String DATABASE_NAME = "VadherS.db";
-    //ToDo modifications: set name of DATABASE_NAME
+
 
     private static final String TAG = "dbhelper";
 
@@ -35,6 +35,8 @@ public class DBHelper extends SQLiteOpenHelper {
         Log.d(TAG, "Create table SQL: " + queryString);
         db.execSQL(queryString);
     }
+
+    //database query for table creation in the backend
 
     @Override
     public void onUpgrade(SQLiteDatabase db, int oldVersion, int newVersion) {

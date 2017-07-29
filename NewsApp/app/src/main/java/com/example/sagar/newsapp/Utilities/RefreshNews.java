@@ -34,4 +34,7 @@ public static final String ACTION_REFRESH="refresh";
         }
         db.close();
     }
+
+    //remove the old data and restore the new data into the database
+
 }
