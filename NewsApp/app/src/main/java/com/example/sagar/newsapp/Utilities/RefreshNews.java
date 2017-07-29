@@ -24,8 +24,8 @@ public static final String ACTION_REFRESH="refresh";
         try{
             DatabaseUtils.deleteAll(db);
             String json= NetworkUtility.getResponseFromURL(url);
-            List<NewsItem> result = NetworkUtility.parseJSON(json);
-            DatabaseUtils.updatenewDB(db, (ArrayList<NewsItem>) result);
+            ArrayList<NewsItem> result = NetworkUtility.parseJSON(json);
+            DatabaseUtils.updatenewDB(db, result);
         }
         catch (IOException e){
             e.printStackTrace();

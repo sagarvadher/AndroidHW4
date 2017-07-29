@@ -53,10 +53,8 @@ public class NewsAdapter extends RecyclerView.Adapter<NewsAdapter.NewsViewHolder
 
         holder.newsTitle.setText(cursor.getString(cursor.getColumnIndex(Contract.TABLE_TODO.COLUMN_TITLE)));
         holder.newsTime.setText(cursor.getString(cursor.getColumnIndex(Contract.TABLE_TODO.COLUMN_NAME_AUTHOR))
-                + " " + cursor.getString(cursor.getColumnIndex(Contract.TABLE_TODO.COMLUMN_NAME_PUBLISHED_AT)));
+                + " " + cursor.getString(cursor.getColumnIndex(Contract.TABLE_TODO.COLUMN_NAME_PUBLISHED_AT)));
         holder.newsDescription.setText(cursor.getString(cursor.getColumnIndex(Contract.TABLE_TODO.COLUMN_NAME_DESCRIPTION)));
-
-
         String imageURL = cursor.getString(cursor.getColumnIndex(Contract.TABLE_TODO.COLUMN_URL_TO_IMAGE));
         Picasso.with(context).load(imageURL).into(holder.newsImageView);
     }
@@ -71,7 +69,6 @@ public class NewsAdapter extends RecyclerView.Adapter<NewsAdapter.NewsViewHolder
         return cursor.getCount();
     }
 
-
     class NewsViewHolder extends RecyclerView.ViewHolder implements View.OnClickListener {
         TextView newsTitle;
         TextView newsDescription;
@@ -84,6 +81,7 @@ public class NewsAdapter extends RecyclerView.Adapter<NewsAdapter.NewsViewHolder
             newsDescription = (TextView) itemView.findViewById(R.id.newsDescription);
             newsTime = (TextView) itemView.findViewById(R.id.newsPublishedAt);
             newsImageView= (ImageView) itemView.findViewById(R.id.newsImage);
+            itemView.setOnClickListener(this);
         }
 
         //implemeted onclicklistener to the view holder

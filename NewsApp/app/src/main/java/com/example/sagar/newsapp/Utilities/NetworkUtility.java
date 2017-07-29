@@ -75,7 +75,7 @@ public class NetworkUtility {
 
 
 
-    public static List<NewsItem> parseJSON(String json)
+    public static ArrayList<NewsItem> parseJSON(String json)
     {
         ArrayList<NewsItem> newsItems = new ArrayList<>();
         try{
@@ -84,13 +84,14 @@ public class NetworkUtility {
             for(int i=0; i< articles.length(); i++)
             {
                 JSONObject article=articles.getJSONObject(i);
+
                 String url=article.getString("url");
                 String title=article.getString ("title");
                 String author=article.getString("author");
                 String imageUrl=article.getString("urlToImage");
                 String description=article.getString("description");
                 String datetime=article.getString("publishedAt");
-                newsItems.add(new NewsItem(url, title, description,imageUrl, author, datetime));
+                newsItems.add(new NewsItem(author, title,description,url,imageUrl, datetime));
 
             }
 

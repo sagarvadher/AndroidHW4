@@ -19,7 +19,7 @@ public class DatabaseUtils {
             null,
             null,
             null,
-            Contract.TABLE_TODO.COMLUMN_NAME_PUBLISHED_AT);
+            Contract.TABLE_TODO.COLUMN_NAME_PUBLISHED_AT);
         return cursor;
 
         }
@@ -39,7 +39,7 @@ public class DatabaseUtils {
                     c.put(Contract.TABLE_TODO.COLUMN_NAME_DESCRIPTION, newsItem.getDescription());
                     c.put(Contract.TABLE_TODO.COLUMN_URL_TO_IMAGE, newsItem.getUrlToImage());
                     c.put(Contract.TABLE_TODO.COLUMN_NAME_AUTHOR,newsItem.getAuthor());
-                    c.put(Contract.TABLE_TODO.COMLUMN_NAME_PUBLISHED_AT, newsItem.getPublishedAt());
+                    c.put(Contract.TABLE_TODO.COLUMN_NAME_PUBLISHED_AT, newsItem.getPublishedAt());
                     db.insert(Contract.TABLE_TODO.TABLE_NAME,null, c);
 
                 }

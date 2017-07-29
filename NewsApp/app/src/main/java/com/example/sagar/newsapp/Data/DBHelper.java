@@ -27,9 +27,9 @@ public class DBHelper extends SQLiteOpenHelper {
                 Contract.TABLE_TODO.COLUMN_NAME_URL+" TEXT , "+
                 Contract.TABLE_TODO.COLUMN_TITLE + " TEXT , " +
                 Contract.TABLE_TODO.COLUMN_NAME_DESCRIPTION+" TEXT , " +
-                Contract.TABLE_TODO.COLUMN_URL_TO_IMAGE+" TEXT , " +
+                Contract.TABLE_TODO.COLUMN_URL_TO_IMAGE + " TEXT , " +
                 Contract.TABLE_TODO.COLUMN_NAME_AUTHOR+" TEXT , " +
-                Contract.TABLE_TODO.COMLUMN_NAME_PUBLISHED_AT+" DATE "+
+                Contract.TABLE_TODO.COLUMN_NAME_PUBLISHED_AT+" DATE "+
                 ");";
 
         Log.d(TAG, "Create table SQL: " + queryString);
